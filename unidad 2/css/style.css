@@ -1,0 +1,276 @@
+:root {
+    --black: #0D0D0D;
+    --soft-black: #1A1A1A;
+    --rose: #F26A8D;
+    --light-rose: #F7C8D3;
+    --cream: #F5EDE6;
+    --gradient: linear-gradient(180deg, #F4A6B8 0%, #F5EDE6 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--gradient);
+    color: var(--black);
+    scroll-behavior: smooth;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--black);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--rose);
+}
+
+
+
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: var(--rose);
+    letter-spacing: 8px;
+}
+
+.welcome {
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+
+
+.section {
+    padding: 100px 80px;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.dark {
+    background: var(--black);
+    color: white;
+}
+
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: var(--soft-black);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.image-placeholder {
+    height: 200px;
+    background: var(--light-rose);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    padding: 15px 25px;
+    border: 1px solid var(--rose);
+    border-radius: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: var(--rose);
+    color: white;
+}
+
+
+
+form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: var(--rose);
+    border: none;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e05578;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--soft-black);
+    color: white;
+}
+
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid var(--rose);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    transition: 0.4s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(242,106,141,0.4);
+}
+
+
+
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 250px;
+        height: 320px;
+    }
+}
+
+.tech-stack {
+    font-size: 13px;
+    margin: 15px 0 10px;
+    color: var(--rose);
+    font-weight: 500;
+}
+
+/* Estilos para los enlaces de Proyectos */
+.project-links {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.project-links a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid var(--rose);
+    transition: 0.3s;
+    padding-bottom: 2px;
+}
+
+.project-links a:hover {
+    color: var(--rose);
+    border-bottom-color: transparent;
+}
+
+/* Estilos para las redes sociales en Contacto */
+.social-contact {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+}
+
+.social-contact a {
+    color: var(--light-rose);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-contact a:hover {
+    color: white;
+}
+
+/* Ajuste para que las imágenes de los proyectos encajen perfecto */
+.image-placeholder {
+    overflow: hidden; /* Oculta lo que se salga del cuadro */
+    border-radius: 5px; /* Le da un toque redondeado a la foto */
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la foto llene el espacio sin aplastarse */
+}
